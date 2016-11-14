@@ -31,7 +31,7 @@ For Android add variable ANDROID_URL_SCHEME for elasticode url scheme like so:
 
 #### Full example
 ```
-cordova plugin add /Users/superman/elasticode-cordova-plugin --variable IOS_URL_SCHEME=ecXXXXXXXX --variable ANDROID_URL_SCHEME=ecXXXXXXXX
+cordova plugin add elasticode-cordova-plugin --variable IOS_URL_SCHEME=ecXXXXXXXX --variable ANDROID_URL_SCHEME=ecXXXXXXXX
 ```
 
 ### 2. Build your app
