@@ -1,11 +1,12 @@
-repositories{
-    jcenter()
-    flatDir{
-        dirs 'aar'
+repositories {
+	jcenter()
+    maven {
+        url "https://s3-eu-west-1.amazonaws.com/elasticode-sdk/Android/maven/"
     }
 }
+
 dependencies {
-    compile(name:'elasticode', ext:'aar')
+    compile 'com.elasticode.sdk:elasticode-android:2.1.0'
 }
 
 android {

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
         id="com.elasticode.cordova"
-        version="2.0.5">
+        version="2.1.0">
 
   <name>Elasticode Cordova Plugin</name>
 
@@ -73,7 +73,6 @@
       </config-file>
       
       <source-file src="src/android/ElasticodeCordovaPlugin.java" target-dir="src/com/elasticode/cordova"/>
-      <resource-file src="src/android/aar/elasticode.aar" target="aar/elasticode.aar" />
       <framework src="com.android.support:support-v4:+" />
       <framework src="src/android/myFile.gradle" custom="true" type="gradleReference" />
       

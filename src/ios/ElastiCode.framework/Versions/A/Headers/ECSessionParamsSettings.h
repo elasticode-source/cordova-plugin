@@ -99,5 +99,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  </dict>
  */
 -(void) disableHTTPS:(BOOL)disable;
+
+-(void) disableAutoRestartSession;
 NS_ASSUME_NONNULL_END
 @end

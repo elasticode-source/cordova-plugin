@@ -243,27 +243,27 @@ public class ElasticodeCordovaPlugin extends CordovaPlugin {
                             if (onLaunchVersion == null) {
                                 continue;
                             }
-                            params.settings.setOnLaunchVersion(onLaunchVersion);
+                            params.getSettings().setOnLaunchVersion(onLaunchVersion);
                             break;
                         case 1:
                             int timeoutParam = settings.getInt(sKey);
-                            params.settings.setConnectionTimeout(timeoutParam);
+                            params.getSettings().setConnectionTimeout(timeoutParam);
                             break;
                         case 2:
                             int imageDownloadTimeout = settings.getInt(sKey);
-                            params.settings.setImageDownloadTimeout(imageDownloadTimeout);
+                            params.getSettings().setImageDownloadTimeout(imageDownloadTimeout);
                             break;
                         case 3:
                             boolean disabledOnLaunch = settings.getBoolean(sKey);
-                            params.settings.setDisabledOnLaunch(disabledOnLaunch);
+                            params.getSettings().setDisabledOnLaunch(disabledOnLaunch);
                             break;
                         case 4:
                             boolean onTimeoutDisableOnLaunch = settings.getBoolean(sKey);
-                            params.settings.setOnTimeoutDisableOnLaunch(onTimeoutDisableOnLaunch);
+                            params.getSettings().setOnTimeoutDisableOnLaunch(onTimeoutDisableOnLaunch);
                             break;
                         case 5:
                             boolean offlineMode = settings.getBoolean(sKey);
-                            params.settings.setOfflineMode(offlineMode);
+                            params.getSettings().setOfflineMode(offlineMode);
                             break;
                         default:
                             break;
@@ -288,7 +288,7 @@ public class ElasticodeCordovaPlugin extends CordovaPlugin {
                             try {
                                 JSONObject value = values.getJSONObject(i);
                                 Map<String, Object> valueMap = _jsonToMap(value);
-                                params.data.addSessionAttributes(valueMap);
+                                params.getData().addSessionAttributes(valueMap);
                             } catch (JSONException ignored) {}
                         }
                     }
@@ -303,7 +303,7 @@ public class ElasticodeCordovaPlugin extends CordovaPlugin {
                             try {
                                 JSONObject value = values.getJSONObject(i);
                                 Map<String, Object> valueMap = _jsonToMap(value);
-                                params.data.addSessionAdjustAttributes(valueMap);
+                                params.getData().addSessionAdjustAttributes(valueMap);
                             } catch (JSONException ignored) {}
                         }
                     }
@@ -318,7 +318,7 @@ public class ElasticodeCordovaPlugin extends CordovaPlugin {
                             try {
                                 JSONObject value = values.getJSONObject(i);
                                 Map<String, Object> valueMap = _jsonToMap(value);
-                                params.data.addSessionAppsFlyerAttributes(valueMap);
+                                params.getData().addSessionAppsFlyerAttributes(valueMap);
                             } catch (JSONException ignored) {}
                         }
                     }
@@ -333,7 +333,7 @@ public class ElasticodeCordovaPlugin extends CordovaPlugin {
                             try {
                                 JSONObject value = values.getJSONObject(i);
                                 Map<String, Object> valueMap = _jsonToMap(value);
-                                params.data.addSessionBranchIOAttributes(valueMap);
+                                params.getData().addSessionBranchIOAttributes(valueMap);
                             } catch (JSONException ignored) {}
                         }
                     }
@@ -348,7 +348,7 @@ public class ElasticodeCordovaPlugin extends CordovaPlugin {
                             try {
                                 JSONObject value = values.getJSONObject(i);
                                 Map<String, Object> valueMap = _jsonToMap(value);
-                                params.data.addSessionButtonAttributes(valueMap);
+                                params.getData().addSessionButtonAttributes(valueMap);
                             } catch (JSONException ignored) {}
                         }
                     }
@@ -363,7 +363,7 @@ public class ElasticodeCordovaPlugin extends CordovaPlugin {
                             try {
                                 JSONObject value = values.getJSONObject(i);
                                 Map<String, Object> valueMap = _jsonToMap(value);
-                                params.data.addSessionKochavaAttributes(valueMap);
+                                params.getData().addSessionKochavaAttributes(valueMap);
                             } catch (JSONException ignored) {}
                         }
                     }
@@ -380,7 +380,7 @@ public class ElasticodeCordovaPlugin extends CordovaPlugin {
                 for (int i = 0; i < moments.length(); i++) {
                     try {
                         String appTriggerName = moments.getString(i);
-                        params.data.defineAppTrigger(appTriggerName);
+                        params.getData().defineAppTrigger(appTriggerName);
                     } catch (JSONException ignored) {}
                 }
             }
@@ -403,7 +403,7 @@ public class ElasticodeCordovaPlugin extends CordovaPlugin {
                                 if(caseData != null && caseData.length() == 2){
                                     String caseName = caseData.getString(0);
                                     int numOfStates = caseData.getInt(1);
-                                    params.data.defineCase(caseName, numOfStates);
+                                    params.getData().defineCase(caseName, numOfStates);
                                 }
                             } catch (JSONException ignored) {}
                         }
@@ -423,7 +423,7 @@ public class ElasticodeCordovaPlugin extends CordovaPlugin {
                                     int doType = doData.getInt(1);
                                     Object defaultValue = doData.get(2);
                                     defaultValue = _convertJSONArrayToObject(doType, defaultValue);
-                                    params.data.defineDynamicObject(doName, ElasticodeDObjType.fromInteger(doType), defaultValue);
+                                    params.getData().defineDynamicObject(doName, ElasticodeDObjType.fromInteger(doType), defaultValue);
                                 }
                             } catch (JSONException ignored) {}
                         }
