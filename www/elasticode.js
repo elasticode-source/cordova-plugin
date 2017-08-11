@@ -1,8 +1,8 @@
 /*global cordova, module*/
 var channel = require('cordova/channel');
 /*
- *  Elasticode Cordova Plugin v2.1.0
- *  iOS SDK v2.0.4
+ *  Elasticode Cordova Plugin v2.1.1
+ *  iOS SDK v2.0.5
  *  Android SDK v2.1.0
  */
 channel.onCordovaReady.subscribe(function() {
