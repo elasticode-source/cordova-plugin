@@ -3,7 +3,7 @@ var channel = require('cordova/channel');
 /*
  *  Elasticode Cordova Plugin v2.1.2
  *  iOS SDK v2.0.5
- *  Android SDK v2.1.0
+ *  Android SDK v2.1.1
  */
 channel.onCordovaReady.subscribe(function() {
     //Call your plugin and do whatever you need to do with the results of it
