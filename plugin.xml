@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
         id="com.elasticode.cordova"
-        version="2.1.5">
+        version="2.1.6">
 
   <name>Elasticode Cordova Plugin</name>
 
