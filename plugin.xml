@@ -41,6 +41,7 @@
 
     <framework src="src/ios/ElastiCode.framework" custom="true" />
     <framework src="QuartzCore.framework" />
+    <framework src="CoreText.framework" />
     <framework src="CFNetwork.framework" />
     <framework src="Foundation.framework" />
     <framework src="MobileCoreServices.framework" />
